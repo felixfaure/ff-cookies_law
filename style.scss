@@ -1,0 +1,58 @@
+/* --------------------------------------------------------------------------
+  ->Example Cookie Banner
+  -------------------------------------------------------------------------- */
+.cookiebanner {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 9000;
+  background-color: $rouge;
+  color: $blanc;
+  padding: .5em 6em .5em 1em;
+  font-size: em(12);
+  a,
+	button {
+		&:hover,
+		&:focus,
+		&:active {
+			color: $noir;
+		}
+	}
+}
+.cookiebanner_close {
+  position: absolute;
+	top: 50%;
+	right: 0;
+  transform: translateY(-50%);
+	padding: .5em 1em;
+}
+
+.cookiebanner_modale {
+  display: none;
+  width: 30em;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9001;
+  transform: translate(-50%,-50%);
+  padding: 1em 1.5em 2em;
+  // background-color: $gris_clair;
+  background-color: $blanc;
+  // box-shadow: 0 .125em .3125em rgba($noir, .5);
+  box-shadow: 0 em(2) em(5) rgba($noir,.5);
+  border: 1px solid $gris;
+  p {
+    margin: (1em * $line-height-base) (0);
+    font-size: em(14);
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
